@@ -3,11 +3,15 @@
  */
 #include "fib.h"
 
-#include <assert.h>		/* assert */
-#include <stdio.h>		/* printf */
+#include <assert.h> /* assert */
+#include <stdio.h>  /* printf */
 
 /* Fibonacci function definition */
-int fib (int n, int p, int pp)
+int fib(int n, int p, int pp)
 {
-    return 0;
+    if (n == 0)
+        return p;
+    if (n == 1)
+        return pp;
+    return (fib(n - 1, pp, p + pp));
 }
